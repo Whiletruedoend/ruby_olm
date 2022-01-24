@@ -10,6 +10,7 @@ void session_init(void);
 void utility_init(void);
 void pk_init(void);
 void sas_init(void);
+void inbound_group_session_init(void);
 
 static VALUE get_olm_version(VALUE self)
 {
@@ -38,6 +39,7 @@ void Init_ruby_olm(void)
     utility_init();
     pk_init();
     sas_init();
+    inbound_group_session_init();
 }
 
 void raise_olm_error(const char *error)
